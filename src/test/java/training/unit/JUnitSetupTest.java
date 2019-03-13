@@ -3,6 +3,7 @@ package training.unit;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
 import org.mockito.Mockito;
+import org.mockito.mock.MockName;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.CoreMatchers.not;
@@ -19,24 +20,20 @@ public class JUnitSetupTest {
 
     @Test
     public void verifyMockito() {
-        Blah mockBlah = mock(Blah.class);
+        MockName mockString = mock(MockName.class);
 
-        mockBlah.doIt();
+        mockString.isDefault();
 
-        Mockito.verify(mockBlah).doIt();
+        Mockito.verify(mockString).isDefault();
     }
 
     @Test
     public void verifyHamcrest() {
-        MatcherAssert.assertThat(new Blah(), is(not(new Blah())));
+        MatcherAssert.assertThat("foo", is(not("bar")));
     }
 
     @Test
     public void verifyAssertJ() {
-        assertThat(new Blah()).isNotEqualTo(new Blah());
-    }
-
-    private class Blah {
-        void doIt() {}
+        assertThat("foo").isNotEqualTo("bar");
     }
 }
