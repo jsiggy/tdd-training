@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>training.tdd</groupId>
-    <artifactId>tdd-training-${tdd-training-group}</artifactId>
+    <artifactId>tdd-training</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <name>TDD and BDD training</name>
@@ -20,10 +20,9 @@
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
         <mockito.version>1.10.8</mockito.version>
+        <parallel.tests>4</parallel.tests>
         <pitest.version>1.4.6</pitest.version>
         <springframework.version>4.3.22.RELEASE</springframework.version>
-        <tdd-training-group>default</tdd-training-group>
-        <parallel.tests>4</parallel.tests>
     </properties>
 
     <dependencies>
